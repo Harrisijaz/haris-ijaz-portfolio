@@ -3,7 +3,7 @@ import SectionTitle from './SectionTitle'
 import { services } from '../data/portfolioData'
 
 const Services = () => (
-  <section id="services" className="bg-[#050816] px-4 py-24 sm:px-6 lg:px-8">
+  <section id="services" className="bg-[#050816] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
     <div className="mx-auto max-w-7xl">
       <SectionTitle
         eyebrow="Services"
@@ -12,7 +12,7 @@ const Services = () => (
       />
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {services.map(({ title, description, icon: Icon }) => (
-          <Card className="min-h-56" key={title}>
+          <Card className="min-h-0 sm:min-h-56" key={title}>
             <div className="mb-5 inline-flex rounded-2xl bg-sky-400/10 p-4 text-2xl text-sky-300">
               <Icon />
             </div>

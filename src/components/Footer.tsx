@@ -17,14 +17,14 @@ const Footer = () => (
         <p className="text-xl font-black text-white">Haris<span className="text-sky-400">.</span></p>
         <p className="mt-2 text-sm text-slate-400">© {new Date().getFullYear()} Haris Ijaz. All rights reserved.</p>
       </div>
-      <nav className="flex flex-wrap gap-3" aria-label="Footer quick links">
+      <nav className="flex flex-wrap gap-x-3 gap-y-2" aria-label="Footer quick links">
         {navItems.map((item) => (
           <a className="text-sm text-slate-300 transition hover:text-sky-300" href={`#${item.toLowerCase()}`} key={item}>
             {item}
           </a>
         ))}
       </nav>
-      <div className="flex items-center gap-3">
+      <div className="flex flex-wrap items-center gap-3">
         {socials.map(({ label, href, icon: Icon }) => (
           <a aria-label={label} className="text-slate-300 transition hover:text-sky-300" href={href} key={label}>
             <Icon />

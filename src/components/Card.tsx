@@ -8,7 +8,7 @@ interface CardProps {
 
 const Card = ({ children, className = '' }: CardProps) => (
   <motion.div
-    className={`glass rounded-2xl p-6 transition ${className}`}
+    className={`glass rounded-2xl p-5 transition sm:p-6 ${className}`}
     initial={{ opacity: 0, y: 28 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, amount: 0.2 }}

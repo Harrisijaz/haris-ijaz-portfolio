@@ -3,7 +3,7 @@ import { experiences } from '../data/portfolioData'
 import SectionTitle from './SectionTitle'
 
 const Experience = () => (
-  <section id="experience" className="bg-[#050816] px-4 py-24 sm:px-6 lg:px-8">
+  <section id="experience" className="bg-[#050816] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
     <div className="mx-auto max-w-5xl">
       <SectionTitle
         eyebrow="Experience"
@@ -23,7 +23,7 @@ const Experience = () => (
             <div className={index % 2 ? 'sm:col-start-2' : ''}>
               <div className="glass ml-10 rounded-2xl p-6 sm:ml-0">
                 <p className="text-sm font-semibold text-sky-300">{item.duration}</p>
-                <h3 className="mt-2 text-2xl font-bold text-white">{item.role}</h3>
+                <h3 className="mt-2 text-xl font-bold text-white sm:text-2xl">{item.role}</h3>
                 <p className="mt-1 text-slate-300">{item.company}</p>
                 <ul className="mt-5 space-y-3 text-left text-sm leading-7 text-slate-300">
                   {item.responsibilities.map((responsibility) => (

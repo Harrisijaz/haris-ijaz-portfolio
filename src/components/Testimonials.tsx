@@ -21,7 +21,7 @@ const Testimonials = () => {
   }
 
   return (
-    <section className="bg-[#050816] px-4 py-24 sm:px-6 lg:px-8" aria-label="Testimonials">
+    <section className="bg-[#050816] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-label="Testimonials">
       <div className="mx-auto max-w-5xl">
         <SectionTitle
           eyebrow="Testimonials"
@@ -30,12 +30,12 @@ const Testimonials = () => {
         />
         <motion.div
           animate={{ opacity: 1, y: 0 }}
-          className="glass rounded-3xl p-8 text-center sm:p-12"
+          className="glass rounded-2xl p-5 text-center sm:rounded-3xl sm:p-12"
           initial={{ opacity: 0, y: 24 }}
           key={active.name}
           transition={{ duration: 0.4 }}
         >
-          <p className="mx-auto max-w-3xl text-xl leading-9 text-slate-200">"{active.quote}"</p>
+          <p className="mx-auto max-w-3xl text-base leading-8 text-slate-200 sm:text-xl sm:leading-9">"{active.quote}"</p>
           <h3 className="mt-8 text-xl font-bold text-white">{active.name}</h3>
           <p className="mt-1 text-sky-200">{active.role}</p>
           <div className="mt-8 flex items-center justify-center gap-3">

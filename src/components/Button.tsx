@@ -19,7 +19,7 @@ const styles = {
 }
 
 const base =
-  'inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 focus:ring-offset-slate-950 disabled:cursor-not-allowed disabled:opacity-60'
+  'inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-xl px-4 py-3 text-center text-sm font-semibold leading-tight transition focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-offset-2 focus:ring-offset-slate-950 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto sm:px-5'
 
 const Button = ({ children, href, type = 'button', variant = 'primary', className = '', disabled, onClick, ariaLabel }: ButtonProps) => {
   const classes = `${base} ${styles[variant]} ${className}`

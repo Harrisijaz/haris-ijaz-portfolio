@@ -5,7 +5,7 @@ import SectionTitle from './SectionTitle'
 const highlights = ['Clean Architecture', 'Performance Optimization', 'Database Design', 'Freelance Delivery']
 
 const About = () => (
-  <section id="about" className="bg-[#050816] px-4 py-24 sm:px-6 lg:px-8">
+  <section id="about" className="bg-[#050816] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
     <div className="mx-auto max-w-7xl">
       <SectionTitle
         eyebrow="About"
@@ -16,13 +16,13 @@ const About = () => (
         <Card className="flex flex-col justify-between">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-300">Profile</p>
-            <h3 className="mt-4 text-3xl font-bold text-white">Haris Ijaz</h3>
+            <h3 className="mt-4 text-2xl font-bold text-white sm:text-3xl">Haris Ijaz</h3>
             <p className="mt-5 leading-8 text-slate-300">
               Java Software Engineer, Spring Boot Developer, Backend Developer, Full Stack Developer, React Developer,
               and Freelancer focused on professional-grade product delivery.
             </p>
           </div>
-          <div className="mt-8 grid grid-cols-2 gap-3">
+          <div className="mt-8 grid gap-3 sm:grid-cols-2">
             {highlights.map((item) => (
               <span className="rounded-xl bg-white/5 px-4 py-3 text-sm text-slate-200" key={item}>
                 {item}

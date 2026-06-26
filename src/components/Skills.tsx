@@ -3,7 +3,7 @@ import SectionTitle from './SectionTitle'
 import { skillGroups } from '../data/portfolioData'
 
 const Skills = () => (
-  <section id="skills" className="bg-slate-950 px-4 py-24 sm:px-6 lg:px-8">
+  <section id="skills" className="bg-slate-950 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
     <div className="mx-auto max-w-7xl">
       <SectionTitle
         eyebrow="Skills"

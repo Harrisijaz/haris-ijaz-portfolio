@@ -47,7 +47,7 @@ const PortfolioCard = ({ item, onLogoClick }: { item: PortfolioItem; onLogoClick
             </p>
           ) : null}
         </div>
-        {item.featured ? <span className="rounded-full bg-sky-400/10 px-3 py-1 text-xs font-semibold text-sky-200">Featured</span> : null}
+        {item.featured ? <span className="shrink-0 rounded-full bg-sky-400/10 px-3 py-1 text-xs font-semibold text-sky-200">Featured</span> : null}
       </div>
       <p className="mt-4 line-clamp-3 leading-7 text-slate-300">{item.description}</p>
       <div className="mt-5 flex flex-wrap gap-2">
@@ -74,7 +74,7 @@ const PortfolioCard = ({ item, onLogoClick }: { item: PortfolioItem; onLogoClick
             View Logo
           </Button>
           {item.documentUrl ? (
-            <Button className="ml-3 mt-3 sm:mt-0" href={item.documentUrl} variant="ghost">
+            <Button className="mt-3 sm:ml-3 sm:mt-0" href={item.documentUrl} variant="ghost">
               Open PDF
             </Button>
           ) : null}
@@ -89,14 +89,14 @@ const LogoModal = ({ item, onClose }: { item: PortfolioItem | null; onClose: () 
     {item ? (
       <motion.div
         aria-modal="true"
-        className="fixed inset-0 z-[70] grid place-items-center bg-slate-950/80 px-4 backdrop-blur"
+        className="fixed inset-0 z-[70] grid place-items-center overflow-y-auto bg-slate-950/80 px-3 py-4 backdrop-blur sm:px-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         role="dialog"
       >
         <motion.div
-          className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-3xl border border-white/10 bg-[#111827] p-4 shadow-2xl sm:p-6"
+          className="relative max-h-[92vh] w-full max-w-4xl overflow-y-auto rounded-2xl border border-white/10 bg-[#111827] p-3 shadow-2xl sm:rounded-3xl sm:p-6"
           initial={{ opacity: 0, y: 30, scale: 0.96 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 30, scale: 0.96 }}
@@ -111,12 +111,12 @@ const LogoModal = ({ item, onClose }: { item: PortfolioItem | null; onClose: () 
           </button>
           <img
             alt={item.title}
-            className="aspect-[16/9] w-full rounded-2xl bg-white object-contain p-5"
+            className="aspect-[4/3] w-full rounded-2xl bg-white object-contain p-3 sm:aspect-[16/9] sm:p-5"
             src={item.image}
           />
           <div className="p-2 pt-6 sm:p-4">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-sky-300">{item.industry}</p>
-            <h3 className="mt-3 text-3xl font-bold text-white">{item.title}</h3>
+            <h3 className="mt-3 text-2xl font-bold text-white sm:text-3xl">{item.title}</h3>
             <p className="mt-2 text-sky-200">{item.style}</p>
             <p className="mt-5 max-w-3xl leading-8 text-slate-300">{item.description}</p>
             {item.documentUrl ? (
@@ -143,17 +143,17 @@ const Portfolio = () => {
   )
 
   return (
-    <section id="portfolio" className="bg-slate-950 px-4 py-24 sm:px-6 lg:px-8">
+    <section id="portfolio" className="bg-slate-950 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-7xl">
         <SectionTitle
           eyebrow="Portfolio"
           title="Project work and brand design in one showcase"
           description="Add future work by editing one object in the portfolio data array. The grid, filters, project actions, and logo modal update automatically."
         />
-        <div className="mb-10 flex flex-wrap justify-center gap-3">
+        <div className="mb-10 flex flex-wrap justify-center gap-2 sm:gap-3">
           {portfolioCategories.map((category) => (
             <button
-              className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${activeCategory === category ? 'border-sky-400 bg-sky-400 text-slate-950' : 'border-white/10 bg-white/5 text-slate-300 hover:border-sky-400/60 hover:text-white'}`}
+              className={`rounded-full border px-3 py-2 text-xs font-semibold transition sm:px-4 sm:text-sm ${activeCategory === category ? 'border-sky-400 bg-sky-400 text-slate-950' : 'border-white/10 bg-white/5 text-slate-300 hover:border-sky-400/60 hover:text-white'}`}
               key={category}
               onClick={() => setActiveCategory(category)}
               type="button"

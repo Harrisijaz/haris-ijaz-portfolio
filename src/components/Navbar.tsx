@@ -50,13 +50,13 @@ const Navbar = () => {
 
   return (
     <motion.header
-      className={`fixed inset-x-0 top-0 z-50 transition ${isScrolled ? 'border-b border-white/10 bg-slate-950/70 shadow-2xl shadow-black/20 backdrop-blur-xl' : 'bg-transparent'}`}
+      className={`fixed inset-x-0 top-0 z-50 transition ${isScrolled || isOpen ? 'border-b border-white/10 bg-slate-950/80 shadow-2xl shadow-black/20 backdrop-blur-xl' : 'bg-transparent'}`}
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8" aria-label="Primary navigation">
-        <Link className="text-lg font-black tracking-wide text-white" to="/">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4 lg:px-8" aria-label="Primary navigation">
+        <Link className="shrink-0 text-lg font-black tracking-wide text-white" to="/">
           Haris<span className="text-sky-400">.</span>
         </Link>
         <div className="hidden items-center gap-1 lg:flex">{navItems.map(renderLink)}</div>
@@ -69,7 +69,7 @@ const Navbar = () => {
           {isOpen ? <FiX /> : <FiMenu />}
         </button>
       </nav>
-      {isOpen ? <div className="mx-4 mb-4 grid rounded-2xl border border-white/10 bg-slate-950/95 p-3 shadow-2xl lg:hidden">{navItems.map(renderLink)}</div> : null}
+      {isOpen ? <div className="mx-4 mb-4 grid max-h-[calc(100vh-5.5rem)] overflow-y-auto rounded-2xl border border-white/10 bg-slate-950/95 p-3 shadow-2xl sm:mx-6 lg:hidden">{navItems.map(renderLink)}</div> : null}
     </motion.header>
   )
 }

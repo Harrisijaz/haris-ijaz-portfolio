@@ -88,7 +88,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="bg-slate-950 px-4 py-24 sm:px-6 lg:px-8">
+    <section id="contact" className="bg-slate-950 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-7xl">
         <SectionTitle
           eyebrow="Contact"
@@ -96,8 +96,8 @@ const Contact = () => {
           description="Use the form for project inquiries, freelance work, consulting, or recruiter conversations."
         />
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-          <aside className="glass rounded-3xl p-8">
-            <h3 className="text-2xl font-bold text-white">Haris Ijaz</h3>
+          <aside className="glass rounded-2xl p-5 sm:rounded-3xl sm:p-8">
+            <h3 className="text-xl font-bold text-white sm:text-2xl">Haris Ijaz</h3>
             <div className="mt-6 space-y-4 text-slate-300">
               <p>
                 Email:{' '}
@@ -112,11 +112,11 @@ const Contact = () => {
                 </a>
               </p>
             </div>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap gap-2 sm:gap-3">
               {socialLinks.map(({ label, href, icon: Icon }) => (
                 <a
                   aria-label={label}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-4 text-xl text-slate-200 transition hover:border-sky-400/60 hover:text-sky-300"
+                  className="rounded-2xl border border-white/10 bg-white/5 p-3 text-xl text-slate-200 transition hover:border-sky-400/60 hover:text-sky-300 sm:p-4"
                   href={href}
                   key={label}
                 >
@@ -125,7 +125,7 @@ const Contact = () => {
               ))}
             </div>
           </aside>
-          <form className="glass rounded-3xl p-6 sm:p-8" onSubmit={handleSubmit}>
+          <form className="glass rounded-2xl p-5 sm:rounded-3xl sm:p-8" onSubmit={handleSubmit}>
             <div className="grid gap-5 sm:grid-cols-2">
               <input
                 className="rounded-xl border border-white/10 bg-slate-950/80 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-sky-400"

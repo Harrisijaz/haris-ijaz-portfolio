@@ -35,17 +35,17 @@ const Counter = ({ value, suffix = '' }: { value: number; suffix?: string }) => 
 }
 
 const Statistics = () => (
-  <section className="bg-slate-950 px-4 py-20 sm:px-6 lg:px-8" aria-label="Portfolio statistics">
+  <section className="bg-slate-950 px-4 py-14 sm:px-6 sm:py-20 lg:px-8" aria-label="Portfolio statistics">
     <div className="mx-auto grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {statistics.map((item) => (
         <motion.div
-          className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 text-center"
+          className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-center sm:p-6"
           initial={{ opacity: 0, y: 24 }}
           key={item.label}
           viewport={{ once: true }}
           whileInView={{ opacity: 1, y: 0 }}
         >
-          <p className="text-4xl font-black text-white">
+          <p className="text-3xl font-black text-white sm:text-4xl">
             <Counter suffix={item.suffix} value={item.value} />
           </p>
           <p className="mt-2 text-sm font-medium text-slate-300">{item.label}</p>
